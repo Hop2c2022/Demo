@@ -1,6 +1,16 @@
-import {Quiz} from "./components/Quiz"
+import {Home} from "./page/Home"
+
+function Click() { 
+  console.log("User click") 
+} 
 const App = () => {
-  return <Quiz/>
+  
+  
+  return ( 
+    <Home/>
+
+    
+  ); 
 };
 
 export default App;
