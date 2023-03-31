@@ -18,6 +18,8 @@
     background: #67eb7f;
     overflow: hidden;
     z-index: 1;
+    display: flex;
+    justify-content: center;
   }
   section .air{
     position: absolute;
@@ -115,4 +117,39 @@
     border-radius: 5px;
     border: 0;
     margin-top: 3%;
+}
+
+.Box {
+  animation-duration: 3s;
+  width: 100%;
+  position: relative;
+  animation-name: ani1;
+  animation-duration: 1s;
+}
+
+.Box2 {
+  width: 100%;
+  position: relative;
+  animation-name: ani2;
+  animation-duration: 1.5s;
+}
+
+@keyframes ani1{
+  0% {top: 700px; }
+  100% {top: 0px; }
+}
+
+.ani {
+  animation-name: anima;
+  animation-duration: 7s;
+}
+
+@keyframes anima{
+  0% {visibility: hidden; opacity: 0;}
+  100% {visibility: visible; opacity: 1;}
+}
+
+@keyframes ani2{
+  0% {top: 700px; }
+  100% {top: 0px; }
 }
