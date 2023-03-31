@@ -1,0 +1,39 @@
+.navbar{
+    background-color: #67eb7f;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    /* display: none; */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.left{
+    background-image: url(../img/Framenew.png);
+    margin-left: 10px;
+    width: 360px;
+    height: 60px;
+    background-size: cover;
+}
+.right{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+    margin-right: 40px;
+}
+.input{
+    width: 50%;
+    height: 30px;
+}
+.navbartext{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    background-color: #67eb7f;
+}
