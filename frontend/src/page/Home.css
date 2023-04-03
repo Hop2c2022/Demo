@@ -14,7 +14,7 @@
   section{
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 380px;
     background: #67eb7f;
     overflow: hidden;
     z-index: 1;
@@ -28,34 +28,36 @@
     width: 100%;
     height: 100px;
     background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
-    background-size: 1000px 100px
+    background-size: 1000px 100px;
+    
   }
   section .air.air1{
-    animation: wave 30s linear infinite;
+    animation: wave 15s linear infinite;
     z-index: 1000;
     opacity: 1;
-    animation-delay: 0s;
+    animation-delay: -5s;
     bottom: 0;
+    color: black;
   }
   section .air.air2{
-    animation: wave2 15s linear infinite;
+    animation: wave2 5s linear infinite;
     z-index: 999;
     opacity: 0.5;
-    animation-delay: -5s;
+    animation-delay: 3s;
     bottom: 10px;
   }
   section .air.air3{
-    animation: wave 30s linear infinite;
+    animation: wave 10s linear infinite;
     z-index: 998;
     opacity: 0.2;
-    animation-delay: -2s;
+    animation-delay: 15s;
     bottom: 15px;
   }
   section .air.air4{
     animation: wave2 5s linear infinite;
     z-index: 997;
     opacity: 0.7;
-    animation-delay: -5s;
+    animation-delay: 10s;
     bottom: 20px;
   }
   @keyframes wave{
@@ -97,6 +99,7 @@
 }
 .Middle {
     width: 55%;
+    margin-bottom: 5%;
 }
 
 .Box1 {
@@ -117,7 +120,9 @@
     border-radius: 5px;
     border: 0;
     margin-top: 3%;
+    transition-duration: 0.5s;
 }
+.Button:hover, .Button:active {width: 10.3%; height: 53px;}
 
 .Box {
   animation-duration: 3s;
@@ -135,13 +140,13 @@
 }
 
 @keyframes ani1{
-  0% {top: 700px; }
-  100% {top: 0px; }
+  0% {top: 700px; visibility: hidden; opacity: 0;}
+  100% {top: 0px; visibility: visible; opacity: 1;}
 }
 
 .ani {
   animation-name: anima;
-  animation-duration: 7s;
+  animation-duration: 5s;
 }
 
 @keyframes anima{
@@ -150,6 +155,6 @@
 }
 
 @keyframes ani2{
-  0% {top: 700px; }
-  100% {top: 0px; }
+  0% {top: 700px; visibility: hidden; opacity: 0;}
+  100% {top: 0px; visibility: visible; opacity: 1;}
 }

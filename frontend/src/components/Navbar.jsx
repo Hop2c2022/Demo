@@ -5,11 +5,10 @@ export const Navbar = () => {
         <div className="left"></div>
         <div className="right">
             <div className="navbartext">Language</div>
-            <button className="navbartext">Class</button>
+            <div className="navbartext">Class</div>
             <div className="navbartext">LogIn</div>
             <div className="navbartext">SignUp</div>
         </div>
-
     </div>
     )
 }
