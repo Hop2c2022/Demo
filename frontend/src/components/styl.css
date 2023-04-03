@@ -1,5 +1,4 @@
 .navbar{
-    background-color: #67eb7f;
     height: 80px;
     width: 100%;
     display: flex;
@@ -7,9 +6,10 @@
     flex-direction: row;
     justify-content: space-between;
     /* display: none; */
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 2;
+
 }
 .left{
     background-image: url(../img/Framenew.png);
@@ -35,5 +35,4 @@
     font-weight: bold;
     color: white;
     border: none;
-    background-color: #67eb7f;
 }
