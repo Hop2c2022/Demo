@@ -11,7 +11,7 @@ export const Home = () => {
             <div className="Home">
                 <Navbar/>
                 <section>
-                    <h1 style={{fontSize:"200%", marginTop:"5%"}}>Pinecone academy designers work of 2023</h1>
+                    <h1 style={{fontSize:"200%", marginTop:"5%", color:"white"}}>Pinecone academy designers work of 2023</h1>
                   <div class='air air1'></div>
                   <div class='air air2'></div>
                   <div class='air air3'></div>

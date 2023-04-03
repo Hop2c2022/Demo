@@ -1,4 +1,5 @@
 import "./styl.css";
+import { Link } from "react-router-dom";
 export const Navbar = () => {
     return(
     <div className="navbar">
@@ -6,8 +7,8 @@ export const Navbar = () => {
         <div className="right">
             <div className="navbartext">Language</div>
             <div className="navbartext">Class</div>
-            <div className="navbartext">LogIn</div>
-            <div className="navbartext">SignUp</div>
+            <Link to={"login"}className="navbartext" >Login</Link>
+            <Link to={"signup"}className="navbartext" >SingUp</Link>
         </div>
     </div>
     )
