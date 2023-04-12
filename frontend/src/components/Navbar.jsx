@@ -7,6 +7,7 @@ export const Navbar = () => {
         <div className="right">
             <div className="navbartext">Language</div>
             <div className="navbartext">Class</div>
+            <Link to={"profile"}className="navbartext" >Profile</Link>
             <Link to={"login"}className="navbartext" >Login</Link>
             <Link to={"signup"}className="navbartext" >SingUp</Link>
         </div>
