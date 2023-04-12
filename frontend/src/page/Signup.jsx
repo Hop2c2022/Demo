@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-
+import {Navbar} from "../components/Navbar"
 export const SignUp = () => {
     return <div className="SignupBackground" style={{width:"100vw",height:'100vh', display:"flex",justifyContent:'center',alignItems:"center"}}>
+      <Navbar/>
       <div style={{backgroundColor:"white",width:538,height:600,borderRadius:'8px',display:"flex",justifyContent:'center',alignItems:"center",flexDirection:'column'}} >
         <div ><img style={{width: 120}} src="logo.svg" alt="" /></div>
         <div style={{color:'#112D48',fontFamily:"Inter",fontSize:'20px',marginTop:"10px"}}>Sign Up</div>
