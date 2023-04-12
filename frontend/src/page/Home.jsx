@@ -3,9 +3,6 @@ import {Box} from "../components/Box"
 import {Box2} from "../components/Box2"
 import {Navbar} from "../components/Navbar"
 export const Home = () => {
-  function click() {
-    console.log("s");
-  }
           
           return ( 
             <div className="Home">
@@ -17,11 +14,6 @@ export const Home = () => {
                   <div class='air air3'></div>
                   <div class='air air4'></div>
                 </section>
-                
-            {/* <div className="box">
-                <h1 style={{color:"white"}}>Pinecone academy designers work of 2023</h1>
-                <input placeholder="Search here ..." className="search"></input>
-            </div> */}
             <div className="Middle">
               <h2 className="ani" style={{marginTop:"5%", marginBottom:"1%"}}>Trending designs</h2>
             <div className="Box1">
