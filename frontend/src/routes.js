@@ -1,6 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Login, SignUp, Home } from "./page";
+import { Class} from "./page/Class"
+import { Profile} from "./page/Profile"
 import React, { useEffect, useState } from "react";
 import ReactLoading from "react-loading";
 
@@ -38,6 +40,8 @@ export const Router = () => {
           <Route path="/login" element={<Login />}/>
           <Route path="/signup" element={<SignUp />}/>
           <Route path="/" element={<Home />}/>
+          <Route path="/class" element={<Class />}/>
+          <Route path="/profile" element={<Profile />}/>
         </Routes>
       </BrowserRouter>
         </ul>

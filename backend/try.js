@@ -1,8 +1,8 @@
 const express = require("express");
 const UserRouter = require("./router/userRouter");
-const postRouter = require("./router/postRouter");
 const commentRouter = require("./router/commentRouter");
-const CardRouter = require("./router/cardRouter")
+const ProjectRouter = require("./router/projectRouter")
+const ClassRouter = require("./router/classRouter")
 const { connectDb } = require("./database/db");
 const app = express();
 const cors = require("cors");
@@ -14,8 +14,8 @@ app.use(cors());
 app.use(express.json());
 app.use(UserRouter);
 app.use(commentRouter);
-app.use(postRouter);
-app.use(CardRouter);
+app.use(ProjectRouter);
+app.use(ClassRouter)
 
 const startServer = async () => {
   await connectDb();

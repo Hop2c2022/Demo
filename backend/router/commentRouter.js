@@ -8,7 +8,7 @@ const {
 
 const UserRouter = express
   .Router()
-  .put("/comment/:post_id", commentPutController)
-  .delete("/comment/:post_id/:comment_id", commentDeleteController)
-  .put("/comment_update/:post_id/:comment_id", commentUpdateController);
+  .put("/comment/:project_id", commentPutController)
+  .delete("/comment/:project_id/:comment_id", commentDeleteController)
+  .put("/comment_update/:project_id/:comment_id", commentUpdateController);
 module.exports = UserRouter;

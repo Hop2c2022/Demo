@@ -22,16 +22,15 @@ exports.GetUser = async () => {
 };
 
 exports.CreateUser = async (req) => {
-  const { username, password, email } = req.body;
+  const { username, password, email, about } = req.body;
   const salt = bcrypt.genSaltSync(1);
   const hash = bcrypt.hashSync(password, salt);
-  const comments = [];
   console.log(hash);
   const result = await new User({
     username: username,
     password: hash,
     email: email,
-    comments: comments,
+    about: about
   }).save();
   console.log(result);
   return result;

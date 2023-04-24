@@ -13,13 +13,11 @@ export const Home = () => {
                   <div class='air air3'></div>
                   <div class='air air4'></div>
                 </section>
-                
-            {/* <div className="box">
-                <h1 style={{color:"white"}}>Pinecone academy designers work of 2023</h1>
-                <input placeholder="Search here ..." className="search"></input>
-            </div> */}
             <div className="Middle">
-              <h2 className="ani" style={{marginTop:"5%", marginBottom:"1%", color:"#222222"}}>Trending</h2>
+                <div style={{width:"100%"}}>
+                    <h2 className="ani" style={{marginTop:"5%", marginBottom:"1%", color:"grey"}}>Trending</h2>
+                </div>
+              
             <div className="scroll_box">
                 <Box />
                 <Box />
@@ -29,7 +27,10 @@ export const Home = () => {
                 <Box />
                 <Box />
             </div>
-            <h2 className="ani" style={{marginTop:"8%", marginBottom:"1%", color:"#222222"}}>Latest</h2>
+            <div style={{width:"100%"}}>
+                <h2 className="ani" style={{marginTop:"8%", marginBottom:"1%", color:"grey"}}>Latest</h2>
+            </div>
+            
             <div className="Box1">
                 <Box2/>
                 <Box2/>
@@ -47,8 +48,10 @@ export const Home = () => {
 
 
             <div className="ani" style={{width:"100%", height:"1px", backgroundColor:"grey", marginTop:"3%"}}></div>
-
-            <h2 className="ani" style={{marginTop:"8%", marginBottom:"1%", color:"#222222"}}>Popular</h2>
+            <div style={{width:"100%"}}>
+                <h2 className="ani" style={{marginTop:"8%", marginBottom:"1%", color:"grey"}}>Popular</h2>
+            </div>
+            
             <div className="Box1">
                 <Box2/>
                 <Box2/>
@@ -64,8 +67,10 @@ export const Home = () => {
             </div>
 
             <div className="ani" style={{width:"100%", height:"1px", backgroundColor:"grey", marginTop:"3%"}}></div>
-
-            <h2 className="ani" style={{marginTop:"8%", marginBottom:"1%", color:"#222222"}}>Infographics</h2>
+            <div style={{width:"100%"}}>
+                <h2 className="ani" style={{marginTop:"8%", marginBottom:"1%", color:"grey"}}>Infographics</h2>
+            </div>
+            
             <div className="Box1">
                 <Box2/>
                 <Box2/>
