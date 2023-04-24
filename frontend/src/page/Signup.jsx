@@ -21,7 +21,7 @@ export const SignUp = () => {
         <input className="button" type="button" value={"Create account"} />
         <div style={{display:"flex",justifyContent:'center',alignItems:"center",flexDirection:'row'}}>
           <div className="bottom" style={{color:"#829AB1"}}>Already Have An Account?</div>
-          <div className="bottom" style={{marginLeft:'1vh',fontWeight:700,cursor:"pointer"}}> <Link style={{color:"black",textDecorationLine:'none'}} to={'/Signup'}>Signup Now</Link> </div>
+          <div className="bottom" style={{marginLeft:'1vh',fontWeight:700,cursor:"pointer"}}> <Link style={{color:"black",textDecorationLine:'none'}} to={'/Signup'}>Signin Now</Link> </div>
         </div>
       </div>
       </div>

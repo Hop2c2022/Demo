@@ -1,8 +1,7 @@
 .SignupBackground{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(116.82deg, rgba(0, 0, 0, 0.5) 31.77%, rgba(5, 146, 5, 0.5) 86.29%);
-    background-color: black;
+    background: #e1e7eb;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,6 +16,7 @@
     align-items: center;
     flex-direction: column;
 }
+
 .full2{
     width: 60vh;
     height: 50vh;
