@@ -1,4 +1,7 @@
-.SignupBackground{
-    background: linear-gradient(116.82deg, rgba(0, 0, 0, 0.5) 31.77%, rgba(5, 146, 5, 0.5) 86.29%);
-    background-color: black;
+.loading {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
