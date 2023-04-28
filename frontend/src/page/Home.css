@@ -101,7 +101,11 @@
     width: 1400px;
     margin-bottom: 5%;
 }
-
+.middlebigword{
+  font-size: 40px;
+  color: rgb(68, 203, 68);
+  font-weight: 500;
+}
 .Box1 {
     width: 100%;
     display: flex;

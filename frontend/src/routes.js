@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import ReactLoading from "react-loading";
 import { Classinformation } from "./page/Classinformation";
 import { Addmember } from "./page/Addmember";
+import { HomeProjectbox } from "./page/HomeProjectbox";
 
 export const Router = () => {
   const [data, setData] = useState([]);
@@ -46,6 +47,7 @@ export const Router = () => {
           <Route path="/profile" element={<Profile />}/>
           <Route path="/classinformation" element={<Classinformation />}/>
           <Route path="/addmember" element={<Addmember />}/>
+          <Route path="/homeProjectbox" element={<HomeProjectbox />}/>
 
         </Routes>
       </BrowserRouter>
