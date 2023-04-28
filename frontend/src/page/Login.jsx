@@ -7,11 +7,11 @@ export const Login = () => {
         <div className="title2">Fill in your details below and Sign in</div>
         <div className="fullinput">
           <div className="holder">Email</div>
-          <input className="input" type="text" placeholder="Sumber@gmail.com" />
+          <input className="inpat" type="text" placeholder="Sumber@gmail.com" />
         </div>
         <div className="fullinput">
           <div className="holder">Password</div>
-          <input className="input" type="text" placeholder="Sumber1234" />
+          <input className="inpat" type="text" placeholder="Sumber1234" />
         </div>
         <input className="button" type="button" value={"Sign in"} />
         <div style={{display:"flex",justifyContent:'center',alignItems:"center",flexDirection:'row'}}>

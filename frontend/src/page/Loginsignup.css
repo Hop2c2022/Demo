@@ -51,7 +51,7 @@ letter-spacing: 0.15008px;
 
 color: #829AB1;
 }
-.input{
+.inpat{
     width: 50vh;
     height: 5vh;
     font-size: 2vh;
@@ -92,7 +92,7 @@ color: #112D48;
     .full2{
         width: 50vh;
     }
-    .input{
+    .inpat{
         width: 45vh;
     }
     .button{
@@ -109,7 +109,7 @@ color: #112D48;
     .full2{
         width: 42.5vh;
     }
-    .input{
+    .inpat{
         width: 37.5vh;
     }
     .button{
@@ -123,7 +123,7 @@ color: #112D48;
     .full2{
         width: 50vh;
     }
-    .input{
+    .inpat{
         width: 45vh;
     }
     .button{
@@ -137,7 +137,7 @@ color: #112D48;
     .full2{
         width: 42.5vh;
     }
-    .input{
+    .inpat{
         width: 37vh;
     }
     .button{

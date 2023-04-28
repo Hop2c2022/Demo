@@ -8,15 +8,15 @@ export const SignUp = () => {
         <div className="title2">Fill in your details below and Sign up</div>
         <div className="fullinput">
           <div className="holder">Username</div>
-          <input className="input" type="text" placeholder="Sumber" />
+          <input className="inpat" type="text" placeholder="Sumber" />
         </div>
         <div className="fullinput">
           <div className="holder">Email</div>
-          <input className="input" type="text" placeholder="Sumber@gmail.com" />
+          <input className="inpat" type="text" placeholder="Sumber@gmail.com" />
         </div>
         <div className="fullinput">
           <div className="holder">Password</div>
-          <input className="input" type="text" placeholder="Sumber1234" />
+          <input className="inpat" type="text" placeholder="Sumber1234" />
         </div>
         <input className="button" type="button" value={"Create account"} />
         <div style={{display:"flex",justifyContent:'center',alignItems:"center",flexDirection:'row'}}>
