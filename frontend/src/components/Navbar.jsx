@@ -9,8 +9,8 @@ export const Navbar = () => {
         setActive(!isActive); 
     }
     return(
-        <div className="navbar">
-    <div className="navbar-top">
+        <div className={isActive ? "navbar" : "fillednavbar"}>
+    <div className={isActive ? "navbar-top" : "fillednavbar-top"}>
 
         <Link to={'/'}>
             <div className="left"></div>
@@ -27,7 +27,7 @@ export const Navbar = () => {
         </div>
         <div onClick={menu} className="menu"></div>
     </div>
-    <div className={isActive ? "menu-slide" : "none"}>
+    <div className={isActive ? "none" : "menu-slide"}>
         <div className="outer-text">
             <div className="menutext">Language</div>
         </div>
