@@ -1,6 +1,5 @@
 import "./Loginsignup.css"
 import { Link } from "react-router-dom";
-import img from "../img/Framenew.png"
 
 export const SignUp = () => {
     return <div className="SignupBackground" style={{width:"100vw",height:'100vh', display:"flex",justifyContent:'center',alignItems:"center"}}>
@@ -22,7 +21,7 @@ export const SignUp = () => {
         <input className="button" type="button" value={"Create account"} />
         <div style={{display:"flex",justifyContent:'center',alignItems:"center",flexDirection:'row'}}>
           <div className="bottom" style={{color:"#829AB1"}}>Already Have An Account?</div>
-          <div className="bottom" style={{marginLeft:'1vh',fontWeight:700,cursor:"pointer"}}> <Link style={{color:"black",textDecorationLine:'none'}} to={'/login'}>Login Now</Link> </div>
+          <div className="bottom" style={{marginLeft:'1vh',fontWeight:700,cursor:"pointer"}}> <Link style={{color:"black",textDecorationLine:'none'}} to={'/Signup'}>Signin Now</Link> </div>
         </div>
         <div style={{width:"87%"}}>
           <Link to={"/"}>
@@ -31,7 +30,6 @@ export const SignUp = () => {
           </button>
           </Link>
         </div>
-        
       </div>
       </div>
   };

@@ -1,5 +1,5 @@
+import "./Loginsignup.css"
 import { Link } from "react-router-dom";
-
 export const Login = () => {
     return <div className="SignupBackground" style={{width:"100vw",height:'100vh', display:"flex",justifyContent:'center',alignItems:"center"}}>
       <div className="full2">
@@ -26,6 +26,7 @@ export const Login = () => {
           </Link>
         </div>
       </div>
-
+      
     </div>
   };
+

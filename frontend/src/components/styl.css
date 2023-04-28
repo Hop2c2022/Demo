@@ -11,15 +11,26 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+.fillednavbar-top{
+    height: 7.5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #67eb7f;
+    border-bottom-left-radius: 5px;
+}
 .menu-slide{
     flex-direction: column;
     width: 40vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    margin-top: 8vh;
     display: none;
+    background-color: #67eb7f;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .navbar{
     height: 7.5vh;
@@ -30,6 +41,18 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+}
+.fillednavbar{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background: rgba(3, 3, 3, 0.639); 
+    backdrop-filter: blur;
 }
 .left{
     background-image: url(../img/Framenew.png);
@@ -156,4 +179,8 @@
         background-color: black;
 
     }
+    .navbar{
+        height: 35%;
+    }
 }
+
