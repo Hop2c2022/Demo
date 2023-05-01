@@ -12,7 +12,6 @@ export const HomeProjectbox = () => {
                     <div className="flexit">
                         <div className="projectboximg"></div>
                         <div>
-
                             <div className="rightsidehome">
                                 <div className="upgreenho">
                                     <div className="whiteho">Project name: Богиноо</div>
