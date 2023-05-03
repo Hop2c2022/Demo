@@ -72,7 +72,38 @@ exports.Getprojects = async (req, res) => {
   const { class_id } = req.params;
   const objId = new mongoose.Types.ObjectId(class_id);
   const findClass = await Class.findById({ _id: objId });
-  const members = findClass.members.id;
-  const findMembers = Project.findOne({user_id: members});
-  return findMembers;
+  const Members = findClass.members
+  const membersArr = []
+  for(let i = 0; i < Members.length; i++) {
+    let memberId = Members[i].id;
+    let member = await Project.findOne({user_id: memberId})
+    membersArr.push(member)
+  }
+  console.log(membersArr);
+  return membersArr;
+}
+
+exports.GetMembers = async (req, res) => {
+  const { class_id } = req.params;
+  const objId = new mongoose.Types.ObjectId(class_id);
+  const findClass = await Class.findById({ _id: objId });
+  const Members = findClass.members
+  const membersArr = []
+  for(let i = 0; i < Members.length; i++) {
+    let memberId = Members[i].id;
+    let member = await User.findById({_id: memberId})
+    membersArr.push(member)
+  }
+  console.log(membersArr);
+  return membersArr;
+}
+
+exports.KickMember = async (req, res) => {
+  const { class_id } = req.params;
+  const { member_id } = req.params;
+  await Class.updateOne({_id: class_id}, {
+    $pull: {
+      members: {id: member_id}
+    }
+  })
 }

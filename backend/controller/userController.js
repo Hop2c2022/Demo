@@ -1,4 +1,5 @@
 const User = require("../database/model/users");
+const { TokenGenerator } = require("../helper/helper");
 const bcrypt = require("bcrypt");
 
 const {
@@ -7,6 +8,8 @@ const {
   UserDelete,
   UserUpdate,
   GetUserByEmail,
+  LIkeProject,
+  DisLIkeProject
 } = require("../query/userQuery");
 
 exports.userGetControllerById = async (req, res) => {
@@ -28,7 +31,7 @@ exports.userGetControllerByEmail = async (req, res) => {
 };
 
 exports.userGetController = async (req, res) => {
-  const result = await User.find().sort({title: 1});
+  const result = await User.find().sort({_id: -1});
   res.status(201).send({ data: result });
 };
 
@@ -44,7 +47,7 @@ exports.userPostController = async (req, res) => {
 exports.userDeleteController = async (req, res) => {
   try {
     await UserDelete(req);
-    res.status(201).send(" Successfully deleted  user ");
+    res.status(201).send(" Successfully deleted  user");
   } catch (err) {
     res.send(err.message);
   }
@@ -53,25 +56,44 @@ exports.userDeleteController = async (req, res) => {
 exports.userPutController = async (req, res) => {
   try {
     await UserUpdate(req);
-    res.status(201).send(" User is successfully updated ");
+    res.status(201).send("User is successfully updated ");
   } catch (err) {
     res.send(err.message);
   }
 };
 
-// exports.userLogin = async (req, res) => {
-//     const { password, email } = req.body;
-//     const user = await User.findOne({ email: email });
-//     const hash = bcrypt.compare(password, user.password);
+exports.LikeProjects = async (req, res) => {
+  try {
+    await LIkeProject(req);
+    res.status(201).send("Successfully liked a project ");
+  } catch (err) {
+    res.send(err.message);
+  }
+};
 
-//     if (!user) res.send(" You don't have any user account, please sign up ");
+exports.DisLikeProjects = async (req, res) => {
+  try {
+    await DisLIkeProject(req);
+    res.status(201).send("Successfully disliked a project ");
+  } catch (err) {
+    res.send(err.message);
+  }
+};
 
-//     if (hash) {
-//         const token = await TokenGenerator({ uid: user._id, expires: '1d' });
-//         res.send({ token: token });
-//         return;
-//     } else {
-//         res.send('Invalid password or email');
-//         return;
-//     }
-// };
+exports.userLogin = async (req, res) => {
+  const { password, email } = req.body;
+  const user = await User.findOne({ email: email });
+  const cmp = await bcrypt.compare(password, user.password);
+  if (!user) {
+    return " You don't have any user account, please sign up ";
+  }
+  if (cmp) {
+    const token = await TokenGenerator({ uid: user._id, expires: 1200 });
+    console.log(user._id.valueOf(), token);
+    return [user._id.valueOf(), token];
+  } else {
+    console.log("Invalid password or email");
+    return "Invalid password or email";
+    // return "Invalid password or email"
+  }
+};

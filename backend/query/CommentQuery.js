@@ -1,5 +1,19 @@
 const Project = require("../database/model/project");
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
+
+function makeid(length) {
+  let result = '';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length;
+  let counter = 0;
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    counter += 1;
+  }
+  return result;
+}
+
 
 exports.AddCommment = async (req, res) => {
   const { project_id } = req.params;
@@ -7,10 +21,11 @@ exports.AddCommment = async (req, res) => {
   const createdAt = new Date(Date.now());
   const objId = new mongoose.Types.ObjectId(project_id);
   const result = await Project.findById({ _id: objId });
-  const commentId = result.comments.length + 1;
+
+  const CommentId = makeid(30)
   
   const Comment = {
-    comment_id: commentId,
+    comment_id: CommentId,
     comment: comment,
     created_at: createdAt
   }
@@ -27,14 +42,11 @@ exports.AddCommment = async (req, res) => {
 exports.CommentDelete = async (req, res) => {
   const { project_id } = req.params;
   const { comment_id } = req.params;
-  const result = await Project.findByIdAndUpdate(
-    { _id: project_id },
-    {
-      $pull: { comments: { comment_id: Number(comment_id) } },
-    },
-    { new: true }
-  );
-  return result;
+  await Project.updateOne({_id: project_id}, {
+    $pull: {
+      comments: {comment_id: comment_id}
+    }
+  })
 };
 
 exports.CommentUpdate = async (req, res) => {

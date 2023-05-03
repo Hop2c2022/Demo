@@ -32,25 +32,6 @@ exports.ProjectDelete = async (req) => {
   return resulto;
 };
 
-exports.LikeProject = async (req) => {
-  const { project_id } = req.params;
-  const project = await Project.findById(project_id);
-
-  if(!project) {
-    return {
-      error: 'iim project baihgui'
-    }
-  }
-  const previousLike = project.likes;
-  await Project.findByIdAndUpdate(project_id,{
-    likes: previousLike + 1
-  })
-  return {
-    success: true
-  }
-}
-
-
 exports.GetProjectById = async (req) => {
   const { project_id } = req.params;
   const objId = new mongoose.Types.ObjectId(project_id);
@@ -70,5 +51,3 @@ exports.ProjectUpdate = async (req) => {
   });
   return resulto;
 };
-
-

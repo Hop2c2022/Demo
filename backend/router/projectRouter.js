@@ -6,7 +6,8 @@ const {
     ProjectDeleteController,
     ProjectPutController,
     ProjectGetControllerById,
-    LikeProjectController
+    LikeProjectController,
+    DisLikeProjectController
 } = require("../controller/projectController");
 const { LikeProject } = require("../query/projectQuery");
 
@@ -17,5 +18,4 @@ const ProjectRouter = express
   .delete("/project/:project_id", ProjectDeleteController)
   .put("/project/:project_id", ProjectPutController)
   .get("/project/:project_id", ProjectGetControllerById)
-  .put("/like_project/:project_id", LikeProjectController)
 module.exports = ProjectRouter;

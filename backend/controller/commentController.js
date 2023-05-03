@@ -1,3 +1,5 @@
+const Project = require("../database/model/project");
+
 const {
   AddCommment,
   CommentDelete,
@@ -16,7 +18,7 @@ exports.commentPutController = async (req, res) => {
 exports.commentDeleteController = async (req, res) => {
   try {
     const result = await CommentDelete(req);
-    res.status(201).send(result);
+    res.status(201).send("comment is successfuly deleted");
   } catch (err) {
     res.send(err.message);
   }
@@ -25,7 +27,7 @@ exports.commentDeleteController = async (req, res) => {
 exports.commentUpdateController = async (req, res) => {
   try {
     await CommentUpdate(req);
-    res.status(201).send("comment is successfully deleted");
+    res.status(201).send("comment is successfully updated");
   } catch (err) {
     res.send(err.message);
   }

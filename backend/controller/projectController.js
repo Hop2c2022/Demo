@@ -6,12 +6,12 @@ const {
   ProjectDelete,
   ProjectUpdate,
   GetProjectById,
-  LikeProject
+
 } = require("../query/projectQuery");
 
 
 exports.ProjectGetController = async (req, res) => {
-  const result = await Project.find().sort({title: 1});
+  const result = await Project.find().sort({_id: -1});
   res.status(201).send({ data: result });
 };
 
@@ -52,11 +52,3 @@ exports.ProjectPutController = async (req, res) => {
 };
 
 
-exports.LikeProjectController = async (req, res) => {
-  try {
-    await LikeProject(req);
-    res.status(201).send(" Successfully liked Project");
-  } catch (err) {
-    res.send(err.message);
-  }
-};
