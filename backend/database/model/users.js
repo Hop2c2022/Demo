@@ -17,8 +17,10 @@ const UserSchema = new mongoose.Schema({
     required: true,
     minlength: [5, "about your self length is too short"],
     maxlength: [40, "about your self length must be 6 to 40 characters"],
+    required: false
   },
   email: { type: String, required: true },
+  liked_projects: {type: Array, required: true},
   createdAt: { type: Date, default: Date.now() },
 });
 

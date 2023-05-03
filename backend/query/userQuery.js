@@ -1,4 +1,5 @@
 const User = require("../database/model/users");
+const Project = require("../database/model/project");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const request = require("supertest");
@@ -25,12 +26,15 @@ exports.CreateUser = async (req) => {
   const { username, password, email, about } = req.body;
   const salt = bcrypt.genSaltSync(1);
   const hash = bcrypt.hashSync(password, salt);
+  const liked_projects = [];
+  const created_projects = []
   console.log(hash);
   const result = await new User({
     username: username,
     password: hash,
     email: email,
-    about: about
+    about: about,
+    liked_projects: liked_projects
   }).save();
   console.log(result);
   return result;
@@ -58,3 +62,40 @@ exports.UserUpdate = async (req) => {
   });
   return resulto;
 };
+
+exports.LIkeProject = async (req) => {
+  const { user_id } = req.params;
+  const { project_id } = req.body;
+  const project = await Project.findById(project_id);
+  const previousLike = project.likes;
+  
+  await Project.findByIdAndUpdate(project_id,{
+    likes: previousLike + 1
+  })
+  
+  const resulto = await User.findByIdAndUpdate(
+    { _id: user_id },
+    { $push: { liked_projects: project_id } },
+    { new: true }
+  );
+  console.log(resulto);
+  return resulto;
+}
+
+exports.DisLIkeProject = async (req) => {
+  const { user_id } = req.params;
+  const { project_id } = req.body;
+  const project = await Project.findById(project_id);
+  const previousLike = project.likes;
+  
+  await Project.findByIdAndUpdate(project_id,{
+    likes: previousLike - 1
+  })
+  
+  const resulto = await User.findByIdAndUpdate(
+    { _id: user_id },
+    { $pull: { liked_projects: project_id } },
+  );
+  console.log(resulto);
+  return resulto;
+}

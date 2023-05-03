@@ -7,7 +7,9 @@ const {
   ClassPutController,
   ClassGetControllerById,
   MemberAdderController,
-  GetProjectsController
+  GetProjectsController,
+  GetMembersController,
+  KickMemberController
 } = require("../controller/classController");
 
 const ClassRouter = express
@@ -19,4 +21,6 @@ const ClassRouter = express
   .get("/class/:class_id", ClassGetControllerById)
   .put("/member/:class_id", MemberAdderController)
   .get("/get_project/:class_id", GetProjectsController)
+  .get("/get_members/:class_id", GetMembersController)
+  .delete("/member/:class_id/:member_id", KickMemberController)
 module.exports = ClassRouter;

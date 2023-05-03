@@ -6,12 +6,14 @@ const {
   GetClassById,
   ClassUpdate,
   MemberAdder,
-  Getprojects
+  Getprojects,
+  GetMembers,
+  KickMember
 } = require("../query/classQuery")
 
 
 exports.ClassGetController = async (req, res) => {
-  const result = await Class.find().sort({title: 1});
+  const result = await Class.find().sort({_id: -1});
   res.status(201).send({ data: result });
 };
 
@@ -65,6 +67,25 @@ exports.GetProjectsController = async (req, res) => {
   try {
     const result = await Getprojects(req);
     res.status(201).send(result);
+  } catch (err) {
+    res.send(err.message);
+  }
+};
+
+exports.GetMembersController = async (req, res) => {
+  try {
+    const result = await GetMembers(req);
+    res.status(201).send(result);
+  } catch (err) {
+    res.send(err.message);
+  }
+};
+
+
+exports.KickMemberController = async (req, res) => {
+  try {
+    const result = await KickMember(req);
+    res.status(201).send("Successfuly kicked member");
   } catch (err) {
     res.send(err.message);
   }

@@ -1,4 +1,5 @@
 const express = require("express");
+const {TokenCheckerMiddleware} = require("../helper/midtoken")
 
 const {
   userPostController,
@@ -7,16 +8,23 @@ const {
   userDeleteController,
   userPutController,
   userGetControllerByEmail,
+  LikeProjects,
+  DisLikeProjects,
+  userLogin
 
 } = require("../controller/userController");
+const { LIkeProject } = require("../query/userQuery");
 
 const UserRouter = express
   .Router()
-  .get("/user", userGetController)
+  .get("/user", TokenCheckerMiddleware, userGetController)
   .post("/user", userPostController)
   .get("/user/:user_id", userGetControllerById)
   .delete("/user/:user_id", userDeleteController)
   .put("/user/:user_id", userPutController)
-  .get("/user/:email", userGetControllerByEmail);
+  .get("/user/:email", userGetControllerByEmail)
+  .put("/likeProject/:user_id", LikeProjects)
+  .put("/dislikeProject/:user_id", DisLikeProjects)
+  .post("/login", userLogin)
 
 module.exports = UserRouter;
