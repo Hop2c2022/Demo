@@ -9,7 +9,7 @@ exports.TokenCheckerMiddleware = async (req, res, next) => {
         return "No Token provided!"
     }
 
-    const secret = "lol123"
+    const secret = "12345678"
     const result = await TokenChecker({token, secret})
 
     if(result === "Expired Token"){

@@ -5,10 +5,7 @@ import { Class} from "./page/Class"
 import { Profile} from "./page/Profile"
 import React, { useEffect, useState } from "react";
 import ReactLoading from "react-loading";
-import { Classinformation } from "./page/Classinformation";
-import { Addmember } from "./page/Addmember";
-import { HomeProjectbox } from "./page/HomeProjectbox";
-import { Upload } from "./page/Upload";
+
 export const Router = () => {
   const [data, setData] = useState([]);
   const [done, setDone] = useState(undefined);
@@ -45,11 +42,6 @@ export const Router = () => {
           <Route path="/" element={<Home />}/>
           <Route path="/class" element={<Class />}/>
           <Route path="/profile" element={<Profile />}/>
-          <Route path="/classinformation" element={<Classinformation />}/>
-          <Route path="/addmember" element={<Addmember />}/>
-          <Route path="/upload" element={<Upload />}/>
-          <Route path="/homeProjectbox" element={<HomeProjectbox />}/>
-
         </Routes>
       </BrowserRouter>
         </ul>

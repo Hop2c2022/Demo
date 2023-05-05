@@ -1,7 +1,6 @@
 import "./class.css"
 import {Navbar} from "../components/Navbar"
 import {ClassBox} from "../components/classBox"
-import { Link } from "react-router-dom";
 export const Class = () => { 
     return (
         <div className="class">
@@ -12,21 +11,15 @@ export const Class = () => {
                 <h2 className="ani" style={{marginTop:"10%", marginBottom:"1%", color:"grey"}}>Trending</h2>
                 </div>
                     <div className="Boxs">
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
-                        <Link className="link" to={"/classinformation"}><ClassBox width={"450px"}/></Link>
+                        <ClassBox width={"450px"}/>
+                        <ClassBox/>
+                        <ClassBox/>
+                        <ClassBox/>
+                        <ClassBox/>
+                        <ClassBox/>
+                        <ClassBox/>
+                        <ClassBox/>
+                        <ClassBox/>
                     </div>
                     
             </div>

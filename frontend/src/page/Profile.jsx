@@ -1,10 +1,7 @@
-
-
-
 import "./profile.css"
 import {Navbar} from "../components/Navbar"
 import {Box2} from "../components/Box2"
-import {Classes} from "../components/Classes"
+import {ClassBox} from "../components/classBox"
 
 export const Profile = () => {
     return(
@@ -28,21 +25,21 @@ export const Profile = () => {
                         </div>
                     </div>
                     <div className="rightsideprof">
-                        <div className="classnameproff">My classes</div>
+                        <div className="classnameproff">Hop2c</div>
                         <div className="classes">
                             <div className="row1">
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"1"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"2"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"3"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"4"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"5"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"6"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"7"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"8"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"9"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"10"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"11"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"12"}/>
+                                <ClassBox teacher={"2 "} classname={"Hop2c"} student={"21 "} project={"23 "}/>
+                                <ClassBox teacher={"2 "} classname={"Hop2c"} student={"21 "} project={"23 "}/>
+                                <ClassBox teacher={"2 "} classname={"Hop2c"} student={"21 "} project={"23 "}/>
+                                <ClassBox teacher={"2 "} classname={"Hop2c"} student={"21 "} project={"23 "}/>
+                                <ClassBox teacher={"2 "} classname={"Hop2c"} student={"21 "} project={"23 "}/>
+                                <ClassBox teacher={"2 "} classname={"Hop2c"} student={"21 "} project={"23 "}/>
+                                <ClassBox teacher={"2 "} classname={"Hop2c"} student={"21 "} project={"23 "}/>
+                                <ClassBox teacher={"2 "} classname={"Hop2c"} student={"21 "} project={"23 "}/>
+                                <ClassBox teacher={"2 "} classname={"Hop2c"} student={"21 "} project={"23 "}/>
+                                <ClassBox teacher={"2 "} classname={"Hop2c"} student={"21 "} project={"23 "}/>
+                                <ClassBox teacher={"2 "} classname={"Hop2c"} student={"21 "} project={"23 "}/>
+                                <ClassBox teacher={"2 "} classname={"Hop2c"} student={"21 "} project={"23 "}/>
                             </div>
                         </div>
                     </div>

@@ -97,15 +97,11 @@
     background-size:cover;
     background-repeat: no-repeat;
 }
-.Middle {
+.Middler {
     width: 1400px;
     margin-bottom: 5%;
 }
-.middlebigword{
-  font-size: 40px;
-  color: rgb(68, 203, 68);
-  font-weight: 500;
-}
+
 .Box1 {
     width: 100%;
     display: flex;
@@ -192,9 +188,6 @@
 }
 
 @media screen and (max-width: 1450px) {
-  .Middle {
-    width: 1200px;
-  }
   .Button {
     width: 11%;
     height: 45px;
@@ -203,15 +196,18 @@
     margin-top: 8%;
     font-size: 300%;
   }
+  .Middler {
+    width: 1200px;
+  }
 }
 
 @media screen and (max-width: 1250px) {
-  .Middle {
+  .Middler {
     width: 990px;
   }
   .Button {
     width: 14%;
-    height: 40px;
+    height: 60px;
   }
   .title {
     margin-top: 12%;
@@ -220,7 +216,7 @@
 }
 
 @media screen and (max-width: 1040px) {
-  .Middle {
+  .Middler {
     width: 760px;
   }
   .Button {
@@ -234,7 +230,7 @@
 }
 
 @media screen and (max-width: 810px) {
-  .Middle {
+  .Middler {
     width: 580px;
   }
   .Button {
@@ -247,7 +243,7 @@
 }
 
 @media screen and (max-width: 630px) {
-  .Middle {
+  .Middler {
     width: 90%;
   }
   .title {

@@ -1,10 +1,11 @@
 .SignupBackground{
     width: 100vw;
     height: 100vh;
-    background: #e1e7eb;
     display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: #e1e7eb;
+    display: flex;
+    flex-direction: column;
 }
 .full1{
     width: 60vh;
@@ -16,7 +17,6 @@
     align-items: center;
     flex-direction: column;
 }
-
 .full2{
     width: 60vh;
     height: 50vh;
@@ -51,7 +51,7 @@ letter-spacing: 0.15008px;
 
 color: #829AB1;
 }
-.inpat{
+.input{
     width: 50vh;
     height: 5vh;
     font-size: 2vh;
@@ -92,7 +92,7 @@ color: #112D48;
     .full2{
         width: 50vh;
     }
-    .inpat{
+    .input{
         width: 45vh;
     }
     .button{
@@ -109,7 +109,7 @@ color: #112D48;
     .full2{
         width: 42.5vh;
     }
-    .inpat{
+    .input{
         width: 37.5vh;
     }
     .button{
@@ -123,7 +123,7 @@ color: #112D48;
     .full2{
         width: 50vh;
     }
-    .inpat{
+    .input{
         width: 45vh;
     }
     .button{
@@ -137,13 +137,14 @@ color: #112D48;
     .full2{
         width: 42.5vh;
     }
-    .inpat{
+    .input{
         width: 37vh;
     }
     .button{
         width: 39vh;
     }
 }
+
 .backButton {
     margin-top: 5%;
     width: 30%;
