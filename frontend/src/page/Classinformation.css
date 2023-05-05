@@ -10,7 +10,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 1400px;
+    width: 1350px
   }
   .profiles{
     display: flex;
@@ -24,11 +24,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 650px;
+    width: 700px;
     height: 500px;
     background-color: #292B2F;;
     border-radius: 15px;
-    z-index: 5;
+    margin-bottom: 2%;
   }
   .upgreen{
     width: 100%;
@@ -36,7 +36,6 @@
     background-color: #67eb7f;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-    z-index: 4;
   }
   .downwhite{
     width: 98%;
@@ -58,10 +57,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 497px;
-    height: 497px;
+    width: 550px;
+    height: 500px;
     border-radius: 15px;
 
+  
   }
   .line{
     border-bottom: 2px solid rgb(91, 197, 140);
@@ -101,13 +101,14 @@
     margin-top: 2%;
     margin-left: 4%;
     color: #012709;
+    margin-bottom: 2%;
   }
   .classes{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    overflow: scroll;
   }
   .row1{
     display: flex;
@@ -131,8 +132,12 @@
     height: 130%;
     margin-right: 3%;
   }
+  
 
 
-
-
+  @media screen and (max-width:1550px){
+    .profiless{
+      width: 1300px;
+    }
+  }
 

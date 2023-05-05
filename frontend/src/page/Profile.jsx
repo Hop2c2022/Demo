@@ -1,20 +1,16 @@
 
-
-
-import "./profile.css"
 import {Navbar} from "../components/Navbar"
 import {Box2} from "../components/Box2"
 import {Classes} from "../components/Classes"
 
 export const Profile = () => {
     return(
-        <div className="profile">
+        <div className="ss">
             <Navbar/>
             <div className="profiless">
                 <div className="profiles">
                     <div className="leftsideprof">
                         <div className="upgreen"></div>
-                        {/* <div className="cyrcle"></div> */}
                         <div className="downwhite">
                             <div className="theirname">Tugsbileg</div>
                             <div className="line"></div>
