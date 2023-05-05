@@ -13,11 +13,11 @@ const {
   userLogin
 
 } = require("../controller/userController");
-const { LIkeProject } = require("../query/userQuery");
+const {TokenCheckerMiddleware} = require("../helper/midtoken")
 
 const UserRouter = express
   .Router()
-  .get("/user", TokenCheckerMiddleware, userGetController)
+  .get("/user", TokenCheckerMiddleware ,userGetController)
   .post("/user", userPostController)
   .get("/user/:user_id", userGetControllerById)
   .delete("/user/:user_id", userDeleteController)

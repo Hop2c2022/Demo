@@ -9,17 +9,15 @@ export const Navbar = () => {
         setActive(!isActive); 
     }
     return(
-        <div className="navbar">
-    <div className="navbar-top">
+        <div id="navbar1" className={isActive ? "navbar" : "fillednavbar"}>
+    <div className={isActive ? "navbar-top" : "fillednavbar-top"}>
 
         <Link to={'/'}>
             <div className="left"></div>
         </Link>
         <div className="right">
             <div className="navbartext">Language</div>
-            <Link className="link" to={"/class"}>
-                <div className="navbartext">Classes</div>
-            </Link>
+            <div className="navbartext">Class</div>
             <Link className="link" to={"/login"}>
                 <div className="navbartext">LogIn</div>
             </Link>
@@ -29,20 +27,20 @@ export const Navbar = () => {
         </div>
         <div onClick={menu} className="menu"></div>
     </div>
-    <div className={isActive ? "menu-slide" : "none"}>
+    <div className={isActive ? "none" : "menu-slide"}>
         <div className="outer-text">
-            <div className="menutext">Language</div>
+            <div id="txt" className="menutext">Language</div>
         </div>
-        <Link className="outer-text" to={"/class"}>
-                <div className="menutext">Classes</div>
-        </Link>
+        <div className="outer-text">
+            <div id="txt"className="menutext">Class</div>
+        </div>
         <Link className="outer-text" to={"/login"}>
-                <div className="menutext">LogIn</div>
+                <div id="txt" className="menutext">LogIn</div>
         </Link>
             <Link className="outer-text" to={"/signup"}>
-                <div className="menutext">SignUp</div>
+                <div id="txt" className="menutext">SignUp</div>
             </Link>
     </div>
     </div>
-    )
+    ) 
 }

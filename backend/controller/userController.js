@@ -81,19 +81,18 @@ exports.DisLikeProjects = async (req, res) => {
 };
 
 exports.userLogin = async (req, res) => {
-  const { password, email } = req.body;
-  const user = await User.findOne({ email: email });
-  const cmp = await bcrypt.compare(password, user.password);
-  if (!user) {
-    return " You don't have any user account, please sign up ";
-  }
-  if (cmp) {
-    const token = await TokenGenerator({ uid: user._id, expires: 1200 });
-    console.log(user._id.valueOf(), token);
-    return [user._id.valueOf(), token];
-  } else {
-    console.log("Invalid password or email");
-    return "Invalid password or email";
-    // return "Invalid password or email"
-  }
+    const { password, email } = req.body;
+    const user = await User.findOne({ email: email });
+    const hash = bcrypt.compare(password, user.password);
+
+    if (!user) res.send("You don't have any user account, please sign up");
+
+    if (hash) {
+        const token = await TokenGenerator({ uid: user._id, expires: '1d' });
+        res.send({ token: token });
+        return;
+    } else {
+        res.send('Invalid password or email');
+        return;
+    }
 };
