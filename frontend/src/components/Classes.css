@@ -54,7 +54,8 @@
     height: 100px;
     background-color: rgb(234, 234, 234);
     border-radius: 13px;
-    margin-bottom: 3%;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
     align-items: center;
     margin-left: 1%;
     justify-content: space-between;
@@ -69,8 +70,6 @@
     display: flex;
     flex-direction: row;
     width: 80%;
-    margin-top: 3%;
-    margin-left: 5%;
 }
 .numberofproject{
     font-size: 20px;

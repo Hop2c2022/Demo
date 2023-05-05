@@ -24,15 +24,32 @@
 }
 .borderh{
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 70%;
-    height: 700px;
+    height: 60vh;
     overflow: scroll;
     border: 2px solid #55cd51;
     margin-top: 3%;
     border-radius: 10px;
     flex-direction: column;
-    padding-top: 4%;
-    /* ene hesgiig zasna */
 }
+
+@media screen and (max-width:1400px){
+    .downsearch{
+      width: 1200px;
+    }
+  }
+
+  @media screen and (max-width:1200px){
+    .downsearch{
+      width: 1100px;
+    }
+  }
+  @media screen and (max-width:1100px){
+    .downsearch{
+      width: 1000px;
+    }
+  }
+
+
+

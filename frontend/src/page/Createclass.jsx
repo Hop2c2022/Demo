@@ -6,11 +6,11 @@ export const Createclass = () => {
             <div style={{margin:"5%"}} className="title1">Create class</div>
         <div className="fullinput">
           <div className="holder">Class name</div>
-          <input className="input" type="text" placeholder="Enter your class name" />
+          <input className="inpat" type="text" placeholder="Enter your class name" />
         </div>
         <div className="fullinput">
           <div className="holder">Class password</div>
-          <input className="input" type="text" placeholder="Enter the class password" />
+          <input className="inpat" type="text" placeholder="Enter the class password" />
         </div>
         <input className="button" type="button" value={"Create class"} />
         </div>  
