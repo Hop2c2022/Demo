@@ -15,11 +15,12 @@
     margin-top: 8%;
 }
 .input{
-    width: 40%;
+    width: 50%;
     height: 70px;
     border-radius: 10px;
     font-size: 20px;
     padding-left: 2%;
+    margin-top: 5%;
     /* ene hesgiig zasna */
 }
 .borderh{
@@ -32,6 +33,42 @@
     margin-top: 3%;
     border-radius: 10px;
     flex-direction: column;
+}
+.addnewmemberTITLE{
+    font-size: 40px;
+    color: rgb(68, 203, 68);
+    font-weight: 500;
+    margin-top: 10%;
+}
+.cn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1400px;
+}
+.addmemrow{
+  display: flex;
+  flex-direction: row;
+}
+.cllk{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 132%;
+  height: 70px;
+  border:#999999 solid 1px;
+  border-radius: 5px;
+  margin-top: 2%;
+  padding-left: 6%;
+  text-align:center;
+}
+.iconplus{
+  background-image: url(../img/addiconplus.png);
+  width: 30px;
+  height:30px;
+  background-size: contain;
+  margin-right: 10%;
 }
 
 @media screen and (max-width:1400px){

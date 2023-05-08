@@ -3,6 +3,7 @@ import {Navbar} from "../components/Navbar"
 import {ClassBox} from "../components/classBox"
 import { Link } from "react-router-dom";
 export const Class = () => { 
+    
     return (
         <div className="class">
             <Navbar/>

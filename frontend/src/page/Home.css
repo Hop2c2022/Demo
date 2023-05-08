@@ -21,6 +21,11 @@
     display: flex;
     justify-content: center;
   }
+  .middlebigword{
+    font-size: 40px;
+    color: rgb(68, 203, 68);
+    font-weight: 500;
+  }
   section .air{
     position: absolute;
     bottom: 0;
