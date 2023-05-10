@@ -50,6 +50,7 @@ export const Router = () => {
           <Route path="/addmember" element={<Addmember />}/>
           <Route path="/upload" element={<Upload />}/>
           <Route path="/homeProjectbox" element={<HomeProjectbox />}/>
+          <Route path="/createproject" element={<Createproject />}/>
           <Route path="/createclass" element={<Createclass />}/>
           <Route path="/class" element={<Class />}/>
 
