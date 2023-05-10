@@ -11,7 +11,6 @@ const {
   KickMember
 } = require("../query/classQuery")
 
-
 exports.ClassGetController = async (req, res) => {
   const result = await Class.find().sort({_id: -1});
   res.status(201).send({ data: result });

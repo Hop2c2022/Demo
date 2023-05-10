@@ -8,7 +8,8 @@ export const SignUp = () => {
   const navigate = useNavigate();
 
   const checkUser = () => {
-    
+    const user = localStorage.getItem("user_inf");
+    // if (user) navigate("/");
   };
 
   useEffect(() => {
@@ -42,19 +43,19 @@ export const SignUp = () => {
         <div className="title1">Sign up</div>
         <div className="fullinput">
           <div className="holder">Username</div>
-          <input onChange={(e) => setUsernameValue(e.target.value)} className="input" type="text" placeholder="Sumber" />
+          <input onChange={(e) => setUsernameValue(e.target.value)} className="inpat" type="text" placeholder="Sumber" />
         </div>
         <div className="fullinput">
           <div className="holder">Email</div>
-          <input onChange={(e) => setEmailValue(e.target.value)} className="input" type="text" placeholder="Sumber@gmail.com" />
+          <input onChange={(e) => setEmailValue(e.target.value)} className="inpat" type="text" placeholder="Sumber@gmail.com" />
         </div>
         <div className="fullinput">
           <div onChange={(e) => setPasswordValue(e.target.value)} className="holder">Password</div>
-          <input type="password" className="input" placeholder="Sumber1234" />
+          <input type="password" className="inpat" placeholder="Sumber1234" />
         </div>
         <div className="fullinput">
           <div onChange={(e) => setPasswordValue2(e.target.value)} className="holder">Verify password</div>
-          <input className="input" type="password" placeholder="Sumber1234" />
+          <input className="inpat" type="password" placeholder="Sumber1234" />
         </div>
       
         <button onClick={dataRetriever} className="button" type="button">Create account</button>
@@ -64,14 +65,9 @@ export const SignUp = () => {
           <Link style={{color:"black",textDecorationLine:'none'}} to={'/login'}>Login Now</Link> 
           </div>
         </div>
-        <div style={{width:"87%"}}>
-          <Link to={"/"}>
-            <button className="backButton">
-            <h2>Go back to home</h2>
-          </button>
-          </Link>
-        </div>
-        
+        <Link style={{marginRight:"5%"}} to={"/"}>
+            <input className="button" type="button" value={"Back to home"}/>
+        </Link>
       </div>
       </div>
   };

@@ -2,21 +2,22 @@ const { TokenChecker } = require("./helper")
 
 exports.TokenCheckerMiddleware = async (req, res, next) => {
     const token = req?.headers?.authorization.split(" ")[1]
-    console.log('tokeeen',req?.headers)
+    const secret = "boomcahca12345678"
 
-    if(!token){
-        res.status(401).send({ message: "No Token provided!" })
-        return "No Token provided!"
-    }
-
-    const secret = "12345678"
     const result = await TokenChecker({token, secret})
 
-    if(result === "Expired Token"){
-        res.status(401).send({ message: "Your token is expired!" })
-        return "Your token is expired!"
-    } else if(result.uid) {
+    if(!token){
+        console.log("sajhfdahsghfgdshghjgdhsvhcdhg");
+        res.status(401).send({ message: "No Token provided!" })
+        res.send( "No Token provided!")
+    }
+
+    res.send(result)
+    if(result.userId) {
         next()
-        return "you may come in"
-    }   
+        res.send( "you may come in")
+    } else if(result === "Expired Token"){
+        res.status(401).send({ message: "Your token is expired!" })
+        res.send( "Your token is expired!")
+    } 
 }

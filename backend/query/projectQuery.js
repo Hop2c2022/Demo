@@ -20,7 +20,6 @@ exports.CreateProject = async (req) => {
     comments: comments,
     likes: likes
   }).save();
-  console.log(result);
   return result;
 };
 

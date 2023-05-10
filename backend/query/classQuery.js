@@ -15,7 +15,6 @@ exports.CreateClass = async (req) => {
    members: members,
    admin: admin
   }).save();
-  console.log(result);
   return result;
 };
 
@@ -54,7 +53,6 @@ exports.MemberAdder = async (req, res) => {
   const objId1 = new mongoose.Types.ObjectId(user_id);
   const result1 = await User.findById({ _id: objId1 });
   const Username = result1.username;
-  console.log(Username);
 
   const Member = {
     id: user_id,
@@ -79,7 +77,7 @@ exports.Getprojects = async (req, res) => {
     let member = await Project.findOne({user_id: memberId})
     membersArr.push(member)
   }
-  console.log(membersArr);
+
   return membersArr;
 }
 
@@ -94,7 +92,7 @@ exports.GetMembers = async (req, res) => {
     let member = await User.findById({_id: memberId})
     membersArr.push(member)
   }
-  console.log(membersArr);
+
   return membersArr;
 }
 

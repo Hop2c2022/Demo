@@ -6,10 +6,8 @@ const connectionString =
 exports.connectDb = async () => {
   try {
     await mongoose.connect(connectionString);
-    console.log(`Successfully connected`);
     return `Mongoose Connected`;
   } catch (err) {
-    console.log(err.message);
     return err.message;
   }
 };

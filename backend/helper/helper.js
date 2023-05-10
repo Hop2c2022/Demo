@@ -11,7 +11,7 @@ exports.TokenChecker= async ({token, secret}) =>{
         if(err && err.message === "jwt expired"){
             return "Expired Token"
         }else if(err){
-            return "Invalid Token"
+            return "Invalid token"
         }
         return decoded
     })

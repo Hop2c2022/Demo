@@ -28,7 +28,6 @@ exports.CreateUser = async (req) => {
   const hash = bcrypt.hashSync(password, salt);
   const liked_projects = [];
   const created_projects = []
-  console.log(hash);
   const result = await new User({
     username: username,
     password: hash,
@@ -36,7 +35,7 @@ exports.CreateUser = async (req) => {
     about: about,
     liked_projects: liked_projects
   }).save();
-  console.log(result);
+
   return result;
 };
 
@@ -78,7 +77,7 @@ exports.LIkeProject = async (req) => {
     { $push: { liked_projects: project_id } },
     { new: true }
   );
-  console.log(resulto);
+  
   return resulto;
 }
 
@@ -96,6 +95,6 @@ exports.DisLIkeProject = async (req) => {
     { _id: user_id },
     { $pull: { liked_projects: project_id } },
   );
-  console.log(resulto);
+  
   return resulto;
 }

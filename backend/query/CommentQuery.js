@@ -35,7 +35,6 @@ exports.AddCommment = async (req, res) => {
     { $push: { comments: Comment } },
     { new: true }
   );
-  console.log(resulto);
   return resulto;
 };
 
@@ -56,7 +55,6 @@ exports.CommentUpdate = async (req, res) => {
   const myProject = await Project.findById({ _id: project_id });
   let too = 0;
   myProject.comments.map((commento) => {
-    console.log(commento);
     if (commento.comment_id == comment_id) {
       myProject.comments[too].comment = comment;
     } else {

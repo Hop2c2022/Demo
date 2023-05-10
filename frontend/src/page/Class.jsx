@@ -1,7 +1,44 @@
 import "./class.css"
 import {Navbar} from "../components/Navbar"
 import {ClassBox} from "../components/classBox"
-export const Class = () => { 
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import  axios from "axios";
+export const Class = () => {
+    const [data, setData] = useState("")
+    const navigate = useNavigate();
+
+    // const checkUser = () => {
+    //   const isuser = localStorage.getItem("user_inf");
+    //   if (isuser) navigate("/");
+    // };
+    
+    const ClassCard = ({ userData }) => {
+        <div className="classBox">
+            <div className="miniBox">
+                <h2 className="title">{userData.classname}</h2>
+                <h3 className="information"> 20 members | 24 projects</h3>
+            </div>
+        </div>
+        
+      };
+
+
+    const dataRetriever = async () => {
+        await axios({
+          url: `http://localhost:8000/class`,
+          method: "GET",
+        }).then((response) => {
+          setData(response.data.data)
+        });
+      }
+    console.log(data);
+    useEffect( () => {
+        dataRetriever();
+    }, []);
+
+    const [output1] = useState(data);
+
     return (
         <div className="class">
             <Navbar/>
@@ -11,14 +48,17 @@ export const Class = () => {
                 <h2 className="ani" style={{marginTop:"10%", marginBottom:"1%", color:"grey"}}>Trending</h2>
                 </div>
                     <div className="Boxs">
-                        <ClassBox width={"450px"}/>
-                        <ClassBox/>
-                        <ClassBox/>
-                        <ClassBox/>
-                        <ClassBox/>
-                        <ClassBox/>
-                        <ClassBox/>
-                        <ClassBox/>
+                    <div className="movie_box">
+        <div style={{ display: "flex" }}>
+          {output1.length === 0 ? (
+            <div className="word">Error</div>
+          ) : (
+            output1.map((userData, i) => {
+              return <ClassCard userData={userData} key={i} />;
+            })
+          )}
+        </div>
+      </div>
                         <ClassBox/>
                     </div>
                     

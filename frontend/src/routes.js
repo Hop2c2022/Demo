@@ -5,6 +5,7 @@ import { Class} from "./page/Class"
 import { Profile} from "./page/Profile"
 import React, { useEffect, useState } from "react";
 import ReactLoading from "react-loading";
+import {CreateClass} from "./page/CreateClass"
 
 export const Router = () => {
   const [data, setData] = useState([]);
@@ -15,7 +16,6 @@ export const Router = () => {
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then((response) => response.json())
         .then((json) => {
-          console.log(json);
           setData(json);
           setDone(true);
         });
@@ -42,6 +42,7 @@ export const Router = () => {
           <Route path="/" element={<Home />}/>
           <Route path="/class" element={<Class />}/>
           <Route path="/profile" element={<Profile />}/>
+          <Route path="/createClass" element={<CreateClass />}/>
         </Routes>
       </BrowserRouter>
         </ul>
