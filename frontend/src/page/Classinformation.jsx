@@ -26,38 +26,37 @@ export const Classinformation = () => {
                         <div className="classnameproff">Hop2c</div>
                         <div className="classes">
                             <div className="row1">
-                                <Classes number={"1"} name={"gishuudiin ners"} project={"23 "}/>
-                                <Classes number={"2"} name={"gishuudiin ners"} project={"23 "}/>
-                                <Classes number={"3"} name={"gishuudiin ners"} project={"23 "}/>
-                                <Classes number={"4"} name={"gishuudiin ners"} project={"23 "}/>
-                                <Classes number={"5"} name={"gishuudiin ners"} project={"23 "}/>
-                                <Classes number={"6"} name={"gishuudiin ners"} project={"23 "}/>
-                                <Classes number={"7"} name={"gishuudiin ners"} project={"23 "}/>
-                                <Classes number={"8"} name={"gishuudiin ners"} project={"23 "}/>
-                                <Classes number={"9"} name={"gishuudiin ners"} project={"23 "}/>
-                                <Classes number={"10"} name={"gishuudiin ners"} project={"23 "}/>
-                                <Classes number={"11"} name={"gishuudiin ners"} project={"23 "}/>
-                                <Classes number={"12"} name={"gishuudiin ners"} project={"23 "}/>
-                                
+                            <Link style={{textDecoration:"none"}} to={"/profile"}><Classes number={"1"} name={"gishuudiin ners"} project={"23 "}/></Link>
+                            <Link style={{textDecoration:"none"}} to={"/profile"}><Classes number={"2"} name={"gishuudiin ners"} project={"23 "}/></Link>
+                            <Link style={{textDecoration:"none"}} to={"/profile"}><Classes number={"3"} name={"gishuudiin ners"} project={"23 "}/></Link>
+                            <Link style={{textDecoration:"none"}} to={"/profile"}><Classes number={"4"} name={"gishuudiin ners"} project={"23 "}/></Link>
+                            <Link style={{textDecoration:"none"}} to={"/profile"}><Classes number={"5"} name={"gishuudiin ners"} project={"23 "}/></Link>
+                            <Link style={{textDecoration:"none"}} to={"/profile"}><Classes number={"6"} name={"gishuudiin ners"} project={"23 "}/></Link>
+                            <Link style={{textDecoration:"none"}} to={"/profile"}><Classes number={"7"} name={"gishuudiin ners"} project={"23 "}/></Link>
+                            <Link style={{textDecoration:"none"}} to={"/profile"}><Classes number={"8"} name={"gishuudiin ners"} project={"23 "}/></Link>
+                            <Link style={{textDecoration:"none"}} to={"/profile"}><Classes number={"9"} name={"gishuudiin ners"} project={"23 "}/></Link>
+                            <Link style={{textDecoration:"none"}} to={"/profile"}><Classes number={"10"} name={"gishuudiin ners"} project={"23 "}/></Link>
+                            <Link style={{textDecoration:"none"}} to={"/profile"}><Classes number={"11"} name={"gishuudiin ners"} project={"23 "}/></Link>
+                            <Link style={{textDecoration:"none"}} to={"/profile"}><Classes number={"12"} name={"gishuudiin ners"} project={"23 "}/></Link>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="myprojects">ALL PROJECTS.</div>
                 <div className="theirprojects">
-                    <Box2/>
-                    <Box2/>
-                    <Box2/>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
                 </div>
                 <div className="theirprojects">
-                    <Box2/>
-                    <Box2/>
-                    <Box2/>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
                 </div>
                 <div className="theirprojects">
-                    <Box2/>
-                    <Box2/>
-                    <Box2/>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
                 </div>
             </div>
             

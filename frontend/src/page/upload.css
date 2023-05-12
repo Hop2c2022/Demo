@@ -69,13 +69,15 @@ section {
   .upload-btn {
     cursor: pointer;
     display: block;
-    margin: 0 auto;
     border: none;
     border-radius: 20px;
-    width: 10rem;
+    width: 20rem;
     height: 3rem;
+    margin-left: 140px;
+    margin-top: 2%;
+    font-size: 20px;
     color: white;
-    background-color: green;
+    background-color: rgb(89, 219, 89);
   }
   
   label:hover,

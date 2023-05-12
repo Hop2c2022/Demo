@@ -2,6 +2,8 @@
 import {Navbar} from "../components/Navbar"
 import {Box2} from "../components/Box2"
 import {Classes} from "../components/Classes"
+import { Link } from "react-router-dom";
+
 
 export const Profile = () => {
     return(
@@ -10,7 +12,7 @@ export const Profile = () => {
             <div className="profiless">
                 <div className="profiles">
                     <div className="leftsideprof">
-                        <div className="upgreen"></div>
+                        <div className="upgreenprof"></div>
                         <div className="downwhite">
                             <div className="theirname">Tugsbileg</div>
                             <div className="line"></div>
@@ -19,7 +21,6 @@ export const Profile = () => {
                                 <div className="tagproff">Designer</div>
                                 <div className="tagproff">Student</div>
                                 <div className="tagproff">Hop3c</div>
-                                <div className="tagproff"></div>
                             </div>
                         </div>
                     </div>
@@ -33,26 +34,20 @@ export const Profile = () => {
                                 <Classes name={"classuudiin ner"}project={"23 "} number={"4"}/>
                                 <Classes name={"classuudiin ner"}project={"23 "} number={"5"}/>
                                 <Classes name={"classuudiin ner"}project={"23 "} number={"6"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"7"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"8"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"9"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"10"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"11"}/>
-                                <Classes name={"classuudiin ner"}project={"23 "} number={"12"}/>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="myprojects">MY PROJECTS.</div>
                 <div className="theirprojects">
-                    <Box2/>
-                    <Box2/>
-                    <Box2/>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
                 </div>
                 <div className="theirprojects">
-                    <Box2/>
-                    <Box2/>
-                    <Box2/>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
                 </div>
             </div>
             

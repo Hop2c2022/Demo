@@ -16,7 +16,7 @@ export const Navbar = () => {
             <div className="left"></div>
         </Link>
         <div className="right">
-             <Link className="link" to={"/createclass"}>
+             <Link className="link" to={"/create"}>
                 <div className="navbartext">Create</div>
             </Link>
             <Link className="link" to={"/class"}>

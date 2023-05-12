@@ -2,7 +2,7 @@ import "./class.css"
 import {Navbar} from "../components/Navbar"
 import {Box2} from "../components/Box2"
 import {StarIcon} from "../components/Star"
-
+import { Link } from "react-router-dom";
 export const HomeProjectbox = () => { 
 
     return (
@@ -17,14 +17,8 @@ export const HomeProjectbox = () => {
                                     <div className="whiteho">Project name: Богиноо</div>
                                 </div>
                                 <div className="starrate" >
-                                    <div className="rate">Rate:</div>
-                                    <div className="star">
-                                        <StarIcon width={"5%"}/>
-                                        <StarIcon width={"5%"}/>
-                                        <StarIcon width={"5%"}/>
-                                        <StarIcon width={"5%"}/>
-                                        <StarIcon width={"5%"}/>
-                                    </div>
+                                    <div className="rate">Like:</div>
+                                    <div className="star">26</div>
                                 </div>
                                 
                                 <div className="downwhite">
@@ -42,14 +36,15 @@ export const HomeProjectbox = () => {
                     </div>
                     <div className="myprojectsho">MY PROJECTS.</div>
                     <div className="theirprojectsho">
-                        <Box2/>
-                        <Box2/>
-                        <Box2/>
+                    <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                    <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                    <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+
                     </div>
                     <div className="theirprojectsho">
-                        <Box2/>
-                        <Box2/>
-                        <Box2/>
+                    <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                    <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
+                    <Link style={{marginLeft:"1%",textDecoration:"none"}} to={"/homeprojectbox"}><Box2/></Link>
                     </div>
             </div>
         </div>

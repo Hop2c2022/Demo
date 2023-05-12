@@ -1,7 +1,8 @@
 import "./Create.css"
-
+import {Navbar} from "../components/Navbar"
 export const Createclass = () => {
     return <div className="Back" style={{width:"100vw",height:'100vh', display:"flex",justifyContent:'center',alignItems:"center"}}>
+      <Navbar/>
         <div className="full2">
             <div style={{margin:"5%"}} className="title1">Create class</div>
         <div className="fullinput">
