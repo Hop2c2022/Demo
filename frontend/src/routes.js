@@ -10,6 +10,8 @@ import { HomeProjectbox } from "./page/HomeProjectbox";
 import { Upload } from "./page/Upload";
 import { Createclass } from "./page/Createclass";
 import { Class } from "./page/Class";
+import { Edit } from "./page/Editprofile";
+import {Createproject} from "./page/Createproject"
 export const Router = () => {
   const [data, setData] = useState([]);
   const [done, setDone] = useState(undefined);
@@ -19,7 +21,6 @@ export const Router = () => {
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then((response) => response.json())
         .then((json) => {
-          console.log(json);
           setData(json);
           setDone(true);
         });
@@ -53,7 +54,7 @@ export const Router = () => {
           <Route path="/createproject" element={<Createproject />}/>
           <Route path="/createclass" element={<Createclass />}/>
           <Route path="/class" element={<Class />}/>
-
+          <Route path="/editprofile" element={<Edit />}/>
         </Routes>
       </BrowserRouter>
         </ul>

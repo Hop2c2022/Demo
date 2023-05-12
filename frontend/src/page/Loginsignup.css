@@ -76,6 +76,7 @@ color: #112D48;
 }
 .button{
     margin: 3%;
+    margin-left: 0;
     width: 52vh;
     height: 4.5vh;
     font-size: 1.75vh;

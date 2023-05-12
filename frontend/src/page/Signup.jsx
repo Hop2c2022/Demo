@@ -18,18 +18,12 @@ export const SignUp = () => {
           <div className="holder">Password</div>
           <input className="inpat" type="text" placeholder="Sumber1234" />
         </div>
-        <input className="button" type="button" value={"Create account"} />
+        <Link to={"/"}><input className="button" type="button" value={"Create account"} /></Link>
         <div style={{display:"flex",justifyContent:'center',alignItems:"center",flexDirection:'row'}}>
           <div className="bottom" style={{color:"#829AB1"}}>Already Have An Account?</div>
           <div className="bottom" style={{marginLeft:'1vh',fontWeight:700,cursor:"pointer"}}> <Link style={{color:"black",textDecorationLine:'none'}} to={'/Signup'}>Signin Now</Link> </div>
         </div>
-        <div style={{width:"87%"}}>
-          <Link to={"/"}>
-            <button className="backButton">
-            <h2>Go back to home</h2>
-          </button>
-          </Link>
-        </div>
+        <Link to={"/"}><input className="button" type="button" value={"Go back to home"} /></Link>
       </div>
       </div>
   };

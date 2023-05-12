@@ -30,14 +30,13 @@ const handleChange1 = (event) => {
     setUrl(event.target.value);
   };
   const Createproject = async () => {
-    const result = await axios.post('http://localhost:8000/project',{
+    const result = await axios.post('https://fk-three.vercel.app/project',{
             url: url,
             title: title,
             word: word,
             classname: classname,
             user_id: "645212a1c122f09ee4e37e59"
       })
-      console.log(result)
   }
 
     return <div className="Back" style={{width:"100vw",height:'100vh', display:"flex",justifyContent:'center',alignItems:"center"}}>
@@ -59,7 +58,9 @@ const handleChange1 = (event) => {
           <div className="holder">URL to your project</div>
           <input id="" onChange={handleChange4} className="inpat" type="text" placeholder="paste your project url" />
         </div>
-        <input  onClick={Createproject}  className="button" type="button" value={"Create project"} />
+        <Link to={"/"}><input  onClick={Createproject}  className="button" type="button" value={"Create project"} /></Link>
+        
+        <Link to={"/"}><input className="button" type="button" value={"Go back to home"} /></Link>
         </div>  
     </div>
   };        

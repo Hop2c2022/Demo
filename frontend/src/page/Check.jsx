@@ -9,6 +9,7 @@ export const Check = () => {
           <input className="inpat" type="text" placeholder="Enter password" />
         </div>
         <input className="button" type="button" value={"Continue"} />
+        <Link to={"/"}><input className="button" type="button" value={"Go back to home"} /></Link>
         </div>  
     </div>
   };

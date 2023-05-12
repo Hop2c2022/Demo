@@ -16,11 +16,9 @@ export const Createclass = () => {
   };
   const Createclass = async () => {
     const admin = "645212a1c122f09ee4e37e59";
-    const result = axios.post(`http://localhost:8000/class/${admin}`,{
+    const result = axios.post(`https://fk-three.vercel.app/class/${admin}`,{
       classname : classname,
       password: password
-    }).then((response) => {
-      console.log(response);
     })
   }
     return <div className="Back" style={{width:"100vw",height:'100vh', display:"flex",justifyContent:'center',alignItems:"center"}}>
@@ -35,6 +33,7 @@ export const Createclass = () => {
           <input className="inpat" type="text" onChange={Change2} placeholder="Enter the class password" />
         </div>
         <input onClick={Createclass} className="button" type="button" value={"Create class"} />
+        <Link to={"/"}><input className="button" type="button" value={"Go back to home"} /></Link>
         </div>  
     </div>
   };
