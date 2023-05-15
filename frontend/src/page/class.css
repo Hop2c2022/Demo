@@ -135,6 +135,8 @@
     margin-left: 1%;
     color: white;
     font-size: 20px;
+    border: none;
+    background-color: #292B2F;
   }
   .starrate{
     display: flex;
