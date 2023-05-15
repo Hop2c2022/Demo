@@ -12,6 +12,7 @@ import { Createclass } from "./page/Createclass";
 import { Class } from "./page/Class";
 import { Edit } from "./page/Editprofile";
 import {Createproject} from "./page/Createproject"
+import { Create } from "./page/Createin";
 export const Router = () => {
   const [data, setData] = useState([]);
   const [done, setDone] = useState(undefined);
@@ -55,6 +56,7 @@ export const Router = () => {
           <Route path="/createclass" element={<Createclass />}/>
           <Route path="/class" element={<Class />}/>
           <Route path="/editprofile" element={<Edit />}/>
+          <Route path="/create" element={<Create />}/>
         </Routes>
       </BrowserRouter>
         </ul>

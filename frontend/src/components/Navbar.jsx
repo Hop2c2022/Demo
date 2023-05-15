@@ -16,11 +16,11 @@ export const Navbar = () => {
             <div className="left"></div>
         </Link>
         <div className="right">
-             <Link className="link" to={"/createclass"}>
+        <Link className="link" to={"/create"}>
                 <div className="navbartext">Create</div>
             </Link>
             <Link className="link" to={"/class"}>
-                <div className="navbartext">Class</div>
+                <div className="navbartext">Classes</div>
             </Link>
             <Link className="link" to={"/login"}>
                 <div className="navbartext">LogIn</div>
@@ -32,11 +32,11 @@ export const Navbar = () => {
         <div onClick={menu} className="menu"></div>
     </div>
     <div className={isActive ? "none" : "menu-slide"}>
-        <Link className="outer-text" to={"/createclass"}>
+    <Link className="link" to={"/create"}>
                 <div className="menutext">Create</div>
             </Link>
         <Link className="outer-text" to={"/class"}>
-                <div className="menutext">Class</div>
+                <div className="menutext">Classes</div>
         </Link>
         <Link className="outer-text" to={"/login"}>
                 <div className="menutext">LogIn</div>
