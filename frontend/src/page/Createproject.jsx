@@ -1,8 +1,8 @@
 import "./Create.css"
 import { Link } from "react-router-dom";
 import  axios from "axios"
-import { useState } from "react";
-
+import React, { useState } from "react";
+import {Navbar} from "../components/Navbar"
 //   sendproject  {
 //   url: url,
 //   title: title,
@@ -17,6 +17,26 @@ const [ title, setTitle ] = useState()
 const [ word, setWord ] = useState()
 const [ classname, setClassname ] = useState()
 
+const [selectedImages, setSelectedImages] = useState([]);
+
+const onSelectFile = (event) => {
+  const selectedFiles = event.target.files;
+  const selectedFilesArray = Array.from(selectedFiles);
+
+  const imagesArray = selectedFilesArray.map((file) => {
+
+    return URL.createObjectURL(file);
+
+  });
+  setSelectedImages((previousImages) => previousImages.concat(imagesArray));
+  event.target.value = "";
+};
+
+function deleteHandler(image) {
+  setSelectedImages(selectedImages.filter((e) => e !== image));
+  URL.revokeObjectURL(image);
+}
+console.log(selectedImages);
 const handleChange1 = (event) => {
     setClassname(event.target.value);
   };
@@ -40,6 +60,7 @@ const handleChange1 = (event) => {
   }
 
     return <div className="Back" style={{width:"100vw",height:'100vh', display:"flex",justifyContent:'center',alignItems:"center"}}>
+      <Navbar/>
         <div className="full1">
             <div style={{margin:"5%"}} className="title1">Create project</div>
         <div className="fullinput">
@@ -58,9 +79,61 @@ const handleChange1 = (event) => {
           <div className="holder">URL to your project</div>
           <input id="" onChange={handleChange4} className="inpat" type="text" placeholder="paste your project url" />
         </div>
-        <Link to={"/"}><input  onClick={Createproject}  className="button" type="button" value={"Create project"} /></Link>
-        
-        <Link to={"/"}><input className="button" type="button" value={"Go back to home"} /></Link>
+        <div className="fullinput">
+          <div className="holder">Image</div>
+          <div>
+            <form action="" onClick={()=>document.querySelector(".holderimg").click()}>
+              <div className="insideuy">Upload Image</div>
+            <input
+          className="holderimg"
+          type="file"
+          name="images"
+          hidden
+          onChange={onSelectFile}
+          multiple
+          accept="image/png , image/jpeg, image/webp"
+        />
+        <div className="images">
+        {selectedImages &&
+          selectedImages.map((image, index) => {
+            return (
+              <div key={image} className="image">
+                <img src={image} height="200" alt="upload" />
+                <button onClick={() => deleteHandler(image)}>
+                  delete image
+                </button>
+              </div>
+            );
+          })}
+      </div>
+
+            </form>
+            {selectedImages.length > 0 &&
+        (selectedImages.length > 1 ? (
+          <p className="error">
+            You can't upload more than 1 image! <br />
+            <span>
+              please delete <b> {selectedImages.length - 1} </b> of them{" "}
+            </span>
+          </p>
+        ) : (
+          <button
+            className="upload-btn"
+            onClick={() => {
+              console.log(selectedImages);
+            }}
+          >
+            UPLOAD PROJECT
+            {selectedImages.length === 1 ? "" : "S"}
+          </button>
+        ))}
+
+
+
+    </div>
+        </div>
+{/*         
+        <Link to={"/"}><input className="button" type="button" value={"Go back to home"} /></Link> */}
         </div>  
     </div>
   };        

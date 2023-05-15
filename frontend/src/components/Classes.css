@@ -1,5 +1,6 @@
 .classmm{
     width:85% ;
+    height: 60px;
     background-color: rgb(234, 234, 234);
     display: flex;
     flex-direction: row;
