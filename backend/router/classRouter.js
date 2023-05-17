@@ -20,7 +20,7 @@ const ClassRouter = express
   .put("/class/:class_id", ClassPutController)
   .get("/class/:class_id", ClassGetControllerById)
   .put("/member/:class_id", MemberAdderController)
-  .get("/get_project/:class_id", GetProjectsController)
+  .get("/get_projects/:class_id", GetProjectsController)
   .get("/get_members/:class_id", GetMembersController)
   .delete("/member/:class_id/:member_id", KickMemberController)
 module.exports = ClassRouter;

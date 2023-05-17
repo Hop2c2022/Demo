@@ -7,8 +7,8 @@ export const Login = () => {
   const navigate = useNavigate();
 
   const checkUser = () => {
-    const isuser = localStorage.getItem("user_inf");
-    // if (isuser) navigate("/");
+    const user_info = localStorage.getItem("user_information");
+    if (user_info) navigate("/");
   };
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export const Login = () => {
 
   const dataRetriever = async () => {
     const res = await axios({
-      url: `http://localhost:8000/login`,
+      url: `https://fk-three.vercel.app/login`,
       method: "POST",
       data: {
         email: emailValue,
@@ -33,7 +33,6 @@ export const Login = () => {
       //   authorization: `Bearer ${tokenn}`,
       // },
     }).then((response) => {
-      console.log(response.data);
       if (
         response?.data == " Please enter your password! " ||
         response?.data == " Please enter your email! " ||
@@ -42,13 +41,11 @@ export const Login = () => {
       ) {
         setWrongm(true);
       } else {
-        const user= response?.data[1];
-        localStorage.setItem("user_inf", user);
-        localStorage.setItem("user_inf", response?.data[0]);
-        sessionStorage.setItem("use_infr", JSON.stringify(user));
-        setTokenn(response?.data[1]);
+        localStorage.setItem("user_information", JSON.stringify(response.data));
+        // sessionStorage.setItem("use_information", JSON.stringify(response.data));
+        setTokenn(response?.data);
         const myHeaders = new Headers();
-        myHeaders.append("authorization", user);
+        // myHeaders.append("authorization", user);
       }
     });
   }

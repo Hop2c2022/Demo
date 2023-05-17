@@ -6,6 +6,9 @@ import { Profile} from "./page/Profile"
 import React, { useEffect, useState } from "react";
 import ReactLoading from "react-loading";
 import {CreateClass} from "./page/CreateClass"
+import { Classinformation } from "./page/Classinformation.jsx";
+import {CreateProject} from "./page/Createproject"
+import { Create } from "./page/Create.jsx";
 
 export const Router = () => {
   const [data, setData] = useState([]);
@@ -43,6 +46,9 @@ export const Router = () => {
           <Route path="/class" element={<Class />}/>
           <Route path="/profile" element={<Profile />}/>
           <Route path="/createClass" element={<CreateClass />}/>
+          <Route path="/classinformation" element={<Classinformation />}/>
+          <Route path="/createProject" element={<CreateProject />}/>
+          <Route path="/create" element={<Create />}/>
         </Routes>
       </BrowserRouter>
         </ul>

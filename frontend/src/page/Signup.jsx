@@ -8,7 +8,7 @@ export const SignUp = () => {
   const navigate = useNavigate();
 
   const checkUser = () => {
-    const user = localStorage.getItem("user_inf");
+    const user = localStorage.getItem("user_information");
     // if (user) navigate("/");
   };
 
@@ -25,15 +25,17 @@ export const SignUp = () => {
 
     if (passValue == passValue2) {
       const res = await axios({
-        url: `http://localhost:8000/user`,
+        url: `https://fk-three.vercel.app/user`,
         method: "POST",
         data: {
           username: usernameValue,
           email: emailValue,
           password: passValue,
         }
-      }).then(() => {
-          window.location.href = "/";
+      }).then((response) => {
+        window.location.href = "/";
+        localStorage.setItem("user_information", response);
+        sessionStorage.setItem("use_information", JSON.stringify(response));
       });
   };
 }

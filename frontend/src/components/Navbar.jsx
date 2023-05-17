@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export const Navbar = () => {
     const looged = false;
-    const user = localStorage.getItem("user_inf");
+    const user = localStorage.getItem("user_information");
     const [isActive, setActive] = useState("false");
     const menu = () =>{
         setActive(!isActive); 
@@ -15,13 +15,11 @@ export const Navbar = () => {
     let first_link = "/login"
     let second_link = "/signup"
     if(user) {
-        one = "Create class"
+        one = "Create"
         second = "Profile"
-        first_link = "/createClass"
+        first_link = "/create"
         second_link = "/profile"
     }
-
-    console.log(user);
     
     return(
         <div id="navbar1" className={isActive ? "navbar" : "fillednavbar"}>
